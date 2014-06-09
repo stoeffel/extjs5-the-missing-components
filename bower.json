@@ -1,6 +1,6 @@
 {
   "name": "extjs5-the-missing-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/stoeffel/extjs5-the-missing-components",
   "authors": [
     "Christoph Hermann <schtoeffel@gmail.com>"
@@ -9,7 +9,8 @@
   "keywords": [
     "extjs5",
     "components",
-    "sencha"
+    "sencha",
+    "searchfield"
   ],
   "license": "MIT",
   "ignore": [
