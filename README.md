@@ -48,12 +48,12 @@ Ext.create('XExt.search.SearchField', {
             // Triggered on triggericon click and enter
             // Do something with the searchvalue (i.e. filter a store)
         },
-        // or search: 'onSearch' <- function from your viewController
+        // or search: 'onSearch' <- function of your viewController
         clear: function() {
             // Triggered on triggericon click and deleting the value of the field
             // Do something with the searchvalue (i.e. clear the filter of a store)
         }
-        // or clear: 'onClear' <- function from your viewController
+        // or clear: 'onClear' <- function of your viewController
     }
 });
 ```
