@@ -37,7 +37,7 @@ Searchfield
 
 ![searchfield](https://github.com/stoeffel/extjs5-the-missing-components/raw/master/images/searchfield.png)
 
-A simple searchfield. It handles clearing, and triggering of a search.
+It handles clearing, and triggering of a search.
 
 ```js
 Ext.create('XExt.search.SearchField', {
