@@ -2,7 +2,7 @@ extjs5-the-missing-components
 =============================
 
 This package adds missing components to extjs5.
-There will be more components as my experience evolves.
+There will be more components soon.
 
 For the moment just one.
 
