@@ -1,0 +1,22 @@
+{
+  "name": "extjs5-the-missing-components",
+  "version": "0.0.1",
+  "homepage": "https://github.com/stoeffel/extjs5-the-missing-components",
+  "authors": [
+    "Christoph Hermann <schtoeffel@gmail.com>"
+  ],
+  "description": "This package adds missing components to extjs5.",
+  "keywords": [
+    "extjs5",
+    "components",
+    "sencha"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

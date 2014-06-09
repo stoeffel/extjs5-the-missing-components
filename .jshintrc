@@ -1,0 +1,23 @@
+{
+    "node": true,
+    "esnext": true,
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "immed": true,
+    "latedef": "nofunc",
+    "newcap": false,
+    "noarg": true,
+    "undef": true,
+    "strict": false,
+    "trailing": true,
+    "smarttabs": true,
+    "indent": 4,
+    "white": false,
+    "quotmark": "single",
+    "laxbreak": true,
+    "globals"   : {
+        "Ext"  : false
+    }
+}
