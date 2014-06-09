@@ -38,6 +38,7 @@ Searchfield
 ![searchfield](https://github.com/stoeffel/extjs5-the-missing-components/raw/master/images/searchfield.png)
 
 It handles clearing, and triggering of a search.
+Check out the sourcecode. It's a nice example for ExtJs5 viewController and encapsulation.
 
 ```js
 Ext.create('XExt.search.SearchField', {
@@ -47,10 +48,12 @@ Ext.create('XExt.search.SearchField', {
             // Triggered on triggericon click and enter
             // Do something with the searchvalue (i.e. filter a store)
         },
+        // or search: 'onSearch' <- function from your viewController
         clear: function() {
             // Triggered on triggericon click and deleting the value of the field
             // Do something with the searchvalue (i.e. clear the filter of a store)
         }
+        // or clear: 'onClear' <- function from your viewController
     }
 });
 ```
