@@ -29,6 +29,7 @@ Ext.define('XExt.editable.DisplayField', {
                 xtype: 'textfield',
                 editable: false,
                 reference: 'display',
+                name: config.displayName,
                 emptyText: config.emptyText || 'no value set',
                 triggers: {
                     edit: {
