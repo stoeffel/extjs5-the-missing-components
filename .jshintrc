@@ -1,5 +1,5 @@
 {
-    "node": true,
+  "node": true,
     "esnext": true,
     "bitwise": true,
     "curly": true,
@@ -18,6 +18,12 @@
     "quotmark": "single",
     "laxbreak": true,
     "globals"   : {
-        "Ext"  : false
+      "Ext"  : false,
+      "describe" :false,
+      "it" :false,
+      "expect" :false,
+      "beforeEach": false,
+      "afterEach": false,
+      "XExt": false
     }
 }
