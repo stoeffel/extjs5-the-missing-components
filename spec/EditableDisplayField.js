@@ -93,7 +93,10 @@ describe('EditableDisplayField', function() {
     it('should display the value of the displayField config', function() {
         field = Ext.create('XExt.editable.DisplayField', {
             store: Ext.create('Ext.data.Store', {
-                fields: ['text', 'id', 'price'],
+                fields: ['text', {
+                    name: 'id',
+                    type: 'int'
+                }, 'price'],
                 data: [{
                     text: 'FooBar',
                     price: '10.50',
@@ -106,6 +109,7 @@ describe('EditableDisplayField', function() {
             }),
             fieldLabel: 'Price',
             displayField: 'price',
+            name: 'id',
             valueField: 'id',
             renderTo: 'content'
         });
@@ -114,7 +118,7 @@ describe('EditableDisplayField', function() {
         field.down('combo').fireEvent('select', field.down('combo'), 1);
         expect(field.getDisplayValue()).toEqual('10.50');
         expect(field.getValue()).toEqual(1);
-        expect(field.hiddenfield.getValue()).toEqual('1');
+        expect(field.hiddenfield.getValue()).toEqual(1);
         field.showCombo();
         expect(field.down('combo').getValue()).toBeNull();
     });

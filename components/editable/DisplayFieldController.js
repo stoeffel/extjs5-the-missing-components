@@ -28,7 +28,12 @@ Ext.define('XExt.editable.DisplayFieldController', {
         this.getView().setDisplayValue(combo.getDisplayValue());
     },
 
-    onComboClear: function(combo, value) {
+    onComboClear: function(combo) {
+        var displayfield = this.lookupReference('display');
         combo.setValue('');
+        combo.hide();
+        displayfield.show();
+        this.getView().setValue('');
+        this.getView().setDisplayValue(null);
     }
 });
