@@ -21,6 +21,7 @@ Ext.define('XExt.editable.DisplayField', {
     },
 
     constructor: function(config) {
+        config.allowBlank = (Ext.isDefined(config.allowBlank))?config.allowBlank:true;
         this.hiddenfield = Ext.widget('hiddenfield', {
             name: config.name
         });
@@ -28,6 +29,7 @@ Ext.define('XExt.editable.DisplayField', {
             items: [this.hiddenfield, {
                 xtype: 'textfield',
                 editable: false,
+                allowBlank: config.allowBlank,
                 reference: 'display',
                 name: config.displayName,
                 emptyText: config.emptyText || 'no value set',
@@ -42,6 +44,7 @@ Ext.define('XExt.editable.DisplayField', {
                 reference: 'combo',
                 hidden: true,
                 store: config.store,
+                allowBlank: config.allowBlank,
                 valueField: config.valueField || 'value',
                 displayField: config.displayField || 'text',
                 listeners: {
@@ -50,6 +53,7 @@ Ext.define('XExt.editable.DisplayField', {
                 triggers: {
                     clear: {
                         cls: 'x-form-clear-trigger',
+                        hidden: !config.allowBlank,
                         handler: 'onComboClear'
                     }
                 }

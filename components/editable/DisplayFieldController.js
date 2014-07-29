@@ -16,6 +16,7 @@ Ext.define('XExt.editable.DisplayFieldController', {
             displayfield = this.lookupReference('display');
         combo.clearValue();
         combo.show();
+        combo.focus();
         displayfield.hide();
     },
 
