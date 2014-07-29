@@ -26,7 +26,7 @@ Ext.define('XExt.editable.DisplayField', {
             name: config.name
         });
         Ext.apply(this, {
-            items: [this.hiddenfield, {
+            items: [this.hiddenfield, Ext.apply({
                 xtype: 'textfield',
                 editable: false,
                 allowBlank: config.allowBlank,
@@ -39,7 +39,7 @@ Ext.define('XExt.editable.DisplayField', {
                         handler: 'onShowCombo'
                     }
                 }
-            }, {
+            }, config.textFieldConfig), {
                 xtype: 'combo',
                 reference: 'combo',
                 hidden: true,
