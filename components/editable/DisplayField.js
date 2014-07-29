@@ -39,7 +39,7 @@ Ext.define('XExt.editable.DisplayField', {
                         handler: 'onShowCombo'
                     }
                 }
-            }, config.textFieldConfig), {
+            }, config.textFieldConfig), Ext.apply({
                 xtype: 'combo',
                 reference: 'combo',
                 hidden: true,
@@ -57,7 +57,7 @@ Ext.define('XExt.editable.DisplayField', {
                         handler: 'onComboClear'
                     }
                 }
-            }]
+            }, config.comboConfig)]
         });
         this.callParent(arguments);
     },
