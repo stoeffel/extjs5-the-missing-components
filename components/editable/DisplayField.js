@@ -3,6 +3,7 @@ Ext.define('XExt.editable.DisplayField', {
 
     requires: ['XExt.editable.DisplayFieldController'],
     controller: 'displayfield',
+    xtype: 'x-editablefield',
 
     listeners: {
         change: 'onChange',
