@@ -98,3 +98,24 @@ Customstyles using [FontAwesome](http://fortawesome.github.io/Font-Awesome/) ico
 }
 ```
 
+EditableDisplayField
+--------------------
+
+Displays a the value in e readonly field with a trigger.
+When the user clicks on the trigger a combobox appears.
+
+![editfield_readonly](https://github.com/stoeffel/extjs5-the-missing-components/raw/master/images/edit_1.png)
+![editfield_combo_empty](https://github.com/stoeffel/extjs5-the-missing-components/raw/master/images/edit_2.png)
+![editfield_combo](https://github.com/stoeffel/extjs5-the-missing-components/raw/master/images/edit_3.png)
+
+```js
+  Ext.create('XExt.editable.DisplayField', {
+      store: 'Group',
+      fieldLabel: 'Group',
+      displayField: 'name',
+      name: 'id',
+      displayName: 'group_id',
+      valueField: 'id'
+  });
+```
+
