@@ -67,6 +67,9 @@ Ext.define('XExt.editable.DisplayField', {
     },
 
     setValue: function(value) {
+        if (Ext.isObject(value)) {
+            value = value.get(this.valueField);
+        }
         this.value = value;
         this.hiddenfield.setValue(value);
     },
