@@ -83,44 +83,30 @@ describe('EditableDisplayField', function() {
         expect(field.down('combo').isVisible()).toBeTruthy();
     });
 
-    it('should set the value of a selected item', function() {
-        field = Ext.create('XExt.editable.DisplayField', {
-            store: Ext.create('Ext.data.Store', {
-                fields: ['text', 'value'],
-                data: [{
-                    text: 'FooBar',
-                    value: 1
-                }]
-            }),
-            renderTo: 'content'
-        });
-        field.showCombo();
-        field.down('combo').setValue(1);
-        expect(field.getValue()).toEqual(1);
-        field.showCombo();
-        expect(field.down('combo').getValue()).toBeNull();
-    });
-
     it('should display the value of the displayField config', function() {
         field = Ext.create('XExt.editable.DisplayField', {
             store: Ext.create('Ext.data.Store', {
-                fields: ['text', 'value', 'price'],
+                fields: ['text', 'id', 'price'],
                 data: [{
                     text: 'FooBar',
                     price: '10.50',
-                    value: 1
+                    id: 1
                 }, {
                     text: 'MooBoo',
                     price: '3.50',
-                    value: 2
+                    id: 2
                 }]
             }),
             fieldLabel: 'Price',
             displayField: 'price',
+            valueField: 'id',
             renderTo: 'content'
         });
         field.showCombo();
-        field.down('combo').setValue(1);
+        field.down('combo').select(1);
+        field.down('combo').fireEvent('select', field.down('combo'), 1);
         expect(field.getDisplayValue()).toEqual('10.50');
+        field.showCombo();
+        expect(field.down('combo').getValue()).toBeNull();
     });
 });

@@ -38,10 +38,10 @@ Ext.define('XExt.editable.DisplayField', {
                 reference: 'combo',
                 hidden: true,
                 store: config.store,
-                valueField: 'value',
+                valueField: config.valueField || 'value',
                 displayField: config.displayField || 'text',
                 listeners: {
-                    change: 'onComboChange'
+                    select: 'onComboChange'
                 },
                 triggers: {
                     clear: {
