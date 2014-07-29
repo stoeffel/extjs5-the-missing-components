@@ -21,8 +21,11 @@ Ext.define('XExt.editable.DisplayField', {
     },
 
     constructor: function(config) {
+        this.hiddenfield = Ext.widget('hiddenfield', {
+            name: config.name
+        });
         Ext.apply(this, {
-            items: [{
+            items: [this.hiddenfield, {
                 xtype: 'textfield',
                 editable: false,
                 reference: 'display',
@@ -65,6 +68,7 @@ Ext.define('XExt.editable.DisplayField', {
 
     setValue: function(value) {
         this.value = value;
+        this.hiddenfield.setValue(value);
     },
 
     getValue: function() {

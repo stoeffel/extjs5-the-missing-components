@@ -49,6 +49,13 @@ describe('EditableDisplayField', function() {
         expect(field.down('textfield')).not.toBeNull();
     });
 
+    it('should contain a hiddenfield', function() {
+        field = Ext.create('XExt.editable.DisplayField', {
+            renderTo: 'content'
+        });
+        expect(field.down('hiddenfield')).not.toBeNull();
+    });
+
     it('should display the value in the textfield', function() {
         field = Ext.create('XExt.editable.DisplayField', {
             renderTo: 'content'
@@ -106,6 +113,8 @@ describe('EditableDisplayField', function() {
         field.down('combo').select(1);
         field.down('combo').fireEvent('select', field.down('combo'), 1);
         expect(field.getDisplayValue()).toEqual('10.50');
+        expect(field.getValue()).toEqual(1);
+        expect(field.hiddenfield.getValue()).toEqual('1');
         field.showCombo();
         expect(field.down('combo').getValue()).toBeNull();
     });
