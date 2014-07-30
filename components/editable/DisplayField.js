@@ -52,6 +52,7 @@ Ext.define('XExt.editable.DisplayField', {
                 valueField: config.valueField || 'value',
                 displayField: config.displayField || 'text',
                 listeners: {
+                    blur: 'onHideCombo',
                     select: 'onComboChange'
                 },
                 triggers: {

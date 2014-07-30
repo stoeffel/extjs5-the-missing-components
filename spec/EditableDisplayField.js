@@ -122,4 +122,13 @@ describe('EditableDisplayField', function() {
         field.showCombo();
         expect(field.down('combo').getValue()).toBeNull();
     });
+
+    it('should hide the combo on blur', function() {
+        field = Ext.create('XExt.editable.DisplayField', {
+            renderTo: 'content'
+        });
+        field.showCombo();
+        field.down('combo').blur();
+        expect(field.down('combo').isVisible()).not.toBeTruthy();
+    });
 });
