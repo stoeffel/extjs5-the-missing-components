@@ -48,7 +48,7 @@ Ext.define('XExt.editable.DisplayField', {
                 reference: 'combo',
                 hidden: true,
                 store: config.store,
-                allowBlank: config.allowBlank,
+                allowBlank: true,
                 valueField: config.valueField || 'value',
                 displayField: config.displayField || 'text',
                 listeners: {
