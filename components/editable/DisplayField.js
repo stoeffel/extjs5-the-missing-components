@@ -57,7 +57,7 @@ Ext.define('XExt.editable.DisplayField', {
                 },
                 triggers: {
                     clear: {
-                        cls: 'x-form-clear-trigger',
+                        cls: 'x-form-clear-trigger xext-trigger-clear',
                         hidden: !config.allowBlank,
                         handler: 'onComboClear'
                     }
