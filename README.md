@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stoeffel/extjs5-the-missing-components.svg)](https://travis-ci.org/stoeffel/extjs5-the-missing-components)
+
 extjs5-the-missing-components
 =============================
 
