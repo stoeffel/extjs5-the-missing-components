@@ -38,5 +38,13 @@ Ext.define('XExt.editable.DisplayFieldController', {
         this.onHideCombo();
         this.getView().setValue('');
         this.getView().setDisplayValue(null);
+    },
+
+    onSpecialkey: function(field, e) {
+        if (e.getKey() === e.ENTER) {
+            this.getView().showCombo();
+        } else if (e.getKey() === e.ESC) {
+            this.onHideCombo();
+        }
     }
 });

@@ -42,6 +42,9 @@ Ext.define('XExt.editable.DisplayField', {
                         cls: 'x-form-clear-trigger xext-trigger-edit',
                         handler: 'onShowCombo'
                     }
+                },
+                listeners: {
+                    specialkey: 'onSpecialkey'
                 }
             }, config.textFieldConfig), Ext.apply({
                 xtype: 'combo',
@@ -53,7 +56,8 @@ Ext.define('XExt.editable.DisplayField', {
                 displayField: config.displayField || 'text',
                 listeners: {
                     blur: 'onHideCombo',
-                    select: 'onComboChange'
+                    select: 'onComboChange',
+                    specialkey: 'onSpecialkey'
                 },
                 triggers: {
                     clear: {
