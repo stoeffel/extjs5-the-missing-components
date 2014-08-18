@@ -115,7 +115,7 @@ When the user clicks on the trigger a combobox appears.
       store: 'Group',
       fieldLabel: 'Group',
       displayField: 'name',
-      name: 'id',
+      valueName: 'id',
       displayName: 'group_id',
       valueField: 'id'
   });

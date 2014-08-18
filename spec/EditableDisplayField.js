@@ -109,7 +109,7 @@ describe('EditableDisplayField', function() {
             }),
             fieldLabel: 'Price',
             displayField: 'price',
-            name: 'id',
+            valueName: 'id',
             valueField: 'id',
             renderTo: 'content'
         });

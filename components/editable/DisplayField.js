@@ -24,7 +24,7 @@ Ext.define('XExt.editable.DisplayField', {
         var me = this;
         config.allowBlank = (Ext.isDefined(config.allowBlank)) ? config.allowBlank : true;
         this.hiddenfield = Ext.widget('hiddenfield', {
-            name: config.name,
+            name: config.valueName,
             getValue: function() {
                 return me.value;
             }
