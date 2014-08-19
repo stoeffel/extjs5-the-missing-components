@@ -26,7 +26,7 @@ Ext.define('XExt.editable.DisplayField', {
         this.hiddenfield = Ext.widget('hiddenfield', {
             name: config.valueName,
             getValue: function() {
-                return me.value;
+                return parseInt(this.value);
             }
         });
         Ext.apply(this, {
