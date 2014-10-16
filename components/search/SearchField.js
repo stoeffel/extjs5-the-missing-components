@@ -7,6 +7,8 @@ Ext.define('XExt.search.SearchField', {
     listeners: {
         specialkey: 'onSpezialkey',
         keyup: 'triggerKeyupInSearch',
+        triggerSearch: 'triggerSearch',
+        triggerClearSearch: 'triggerClearSearch',
         scope: 'controller'
     },
     emptyText: 'search...',
@@ -14,14 +16,16 @@ Ext.define('XExt.search.SearchField', {
     triggers: {
         search: {
             cls: 'x-form-search-trigger xext-trigger-search',
-            handler: 'triggerSearch',
-            scope: 'controller'
+            handler: function(trigger) {
+                this.fireEvent('triggerSearch', this);
+            }
         },
         clear: {
             cls: 'x-form-clear-trigger xext-trigger-clear',
-            handler: 'triggerClearSearch',
-            hidden: true,
-            scope: 'controller'
+            handler: function(trigger) {
+                this.fireEvent('triggerClearSearch', this);
+            },
+            hidden: true
         }
     }
 });
