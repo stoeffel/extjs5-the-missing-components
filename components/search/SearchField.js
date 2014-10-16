@@ -7,6 +7,8 @@ Ext.define('XExt.search.SearchField', {
     listeners: {
         specialkey: 'onSpezialkey',
         keyup: 'triggerKeyupInSearch',
+        triggerSearch: 'triggerSearch',
+        triggerClearSearch: 'triggerClearSearch',
         scope: 'controller'
     },
     emptyText: 'search...',
